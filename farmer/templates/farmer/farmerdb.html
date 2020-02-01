@@ -1,0 +1,19 @@
+{% extends "shop/base.html" %}
+{% block content %}
+<table style="width:100%"
+<tr>
+<th> Name </th>
+<th> Address </th>
+<th> Mobile </th>
+</tr>
+
+{% for c in farm %}
+<tr>
+<td>{{ c.name }}</td>
+<td>{{ c.address }}</td>
+  
+<td>{{ c.mobile }}</td>
+</tr>
+{% endfor %}
+
+{% endblock %}
