@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from django.urls import path, include
 
 app_name = 'shop'
 
@@ -9,4 +10,6 @@ urlpatterns = [
          name='product_list_by_category'),
     path('<int:id>/<slug:slug>/', views.product_detail,
          name='product_detail'),
+    path('', include('farmer.urls', namespace='farmer')),
+
 ]
